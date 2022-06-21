@@ -55,5 +55,5 @@ public class item {
  public void setItem_type(int item_type) {
   this.item_type = item_type;
  }
- 
+
 }
