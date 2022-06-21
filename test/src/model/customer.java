@@ -6,7 +6,7 @@ public class customer {
     String addresss;
     String city;
     String provide;
-    int postcode;
+    int postalcode;
 
 
 
