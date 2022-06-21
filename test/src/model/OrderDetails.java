@@ -6,6 +6,16 @@ public class OrderDetails {
    private int orderqty;
     private double discount;
 
+    public OrderDetails() {
+    }
+
+    public OrderDetails(int orderid, int item_code, int orderqty, double discount) {
+        this.orderid = orderid;
+        this.item_code = item_code;
+        this.orderqty = orderqty;
+        this.discount = discount;
+    }
+
     public int getOrderid() {
         return orderid;
     }

@@ -8,6 +8,18 @@ public class item {
     private int unitPrice;
     private int item_type;
 
+ public item() {
+ }
+
+ public item(int item_code, String description, int packSize, int qtyOnHand, int unitPrice, int item_type) {
+  this.item_code = item_code;
+  this.description = description;
+  this.packSize = packSize;
+  this.qtyOnHand = qtyOnHand;
+  this.unitPrice = unitPrice;
+  this.item_type = item_type;
+ }
+
  public int getItem_code() {
   return item_code;
  }
