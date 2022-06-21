@@ -2,7 +2,7 @@ package model;
 
 public class Order {
    // int cusID;
-   int orderid;
+  // int orderid;
    int order_date;
     double price;
 }
