@@ -1,7 +1,7 @@
 package model;
 
 public class customer {
-    String cusID;
+    int cusID;
     String name;
     String addresss;
     String city;
