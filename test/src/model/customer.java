@@ -5,7 +5,7 @@ public class customer {
     String name;
     String addresss;
     String city;
-   // String provide;
+    String provide;
    // int postcode;
 
 
