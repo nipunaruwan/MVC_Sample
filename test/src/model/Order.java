@@ -6,6 +6,16 @@ public class Order {
    private int order_date;
     private double price;
 
+    public Order() {
+    }
+
+    public Order(int cusID, int orderid, int order_date, double price) {
+        this.cusID = cusID;
+        this.orderid = orderid;
+        this.order_date = order_date;
+        this.price = price;
+    }
+
     public int getCusID() {
         return cusID;
     }
