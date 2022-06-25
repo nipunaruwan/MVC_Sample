@@ -64,8 +64,20 @@ public class item {
   return item_type;
  }
 
+
+
  public void setItem_type(int item_type) {
   this.item_type = item_type;
  }
-
+ @Override
+ public String toString() {
+  return "item{" +
+          "item_code=" + item_code +
+          ", description='" + description + '\'' +
+          ", packSize=" + packSize +
+          ", qtyOnHand=" + qtyOnHand +
+          ", unitPrice=" + unitPrice +
+          ", item_type=" + item_type +
+          '}';
+ }
 }

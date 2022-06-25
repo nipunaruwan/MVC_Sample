@@ -1,9 +1,11 @@
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 
 public class Appinitailizer extends Application {
 
@@ -13,7 +15,10 @@ public class Appinitailizer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("view/customer.fxml"))));
+        URL resource = getClass().getResource("view/LoginForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        Scene scene=new Scene(load);
+        primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.show();
     }
