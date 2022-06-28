@@ -3,6 +3,7 @@ package controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -28,7 +29,9 @@ LoginFormManager();
             Stage window = (Stage) root.getScene().getWindow();
             window.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/DashboardController.fxml"))));
 
-
+        }else {
+            new Alert(Alert.AlertType.CONFIRMATION, "Try Again").show();
+        }
      /* System.out.println("wada");
         } else if (txtUsername.getText().isEmpty() && txtpassword.getText().isEmpty()) {
            //root.setText("Your User Name Or Password IS Empty...!");
@@ -50,4 +53,4 @@ LoginFormManager();
 
     }
 
-    }
+

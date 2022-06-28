@@ -1,48 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="640.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderController">
+<AnchorPane prefHeight="640.0" prefWidth="971.0" stylesheets="@../Css/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderController">
    <children>
       <Text layoutX="411.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Form">
          <font>
             <Font name="System Bold" size="27.0" />
          </font>
       </Text>
-      <JFXTextField layoutX="62.0" layoutY="184.0" prefHeight="25.0" prefWidth="265.0" promptText="CustomerID" />
-      <JFXTextField layoutX="521.0" layoutY="183.0" prefHeight="25.0" prefWidth="265.0" promptText="orderId" />
-      <JFXTextField layoutX="521.0" layoutY="298.0" prefHeight="25.0" prefWidth="265.0" promptText="Order price" />
-      <TableView layoutX="12.0" layoutY="378.0" prefHeight="258.0" prefWidth="944.0">
+      <JFXTextField layoutX="42.0" layoutY="119.0" prefHeight="25.0" prefWidth="199.0" promptText="orderId" />
+      <JFXTextField layoutX="295.0" layoutY="254.0" prefHeight="25.0" prefWidth="190.0" promptText="Discription" />
+      <TableView layoutX="38.0" layoutY="366.0" prefHeight="233.0" prefWidth="906.0">
         <columns>
-          <TableColumn prefWidth="198.0" text="CustomerID" />
-          <TableColumn prefWidth="178.0" text="orderId" />
-            <TableColumn prefWidth="173.0" text="order_date" />
-            <TableColumn prefWidth="293.0" text="Order price" />
+          <TableColumn prefWidth="198.0" text="Item Code" />
+          <TableColumn prefWidth="178.0" text="Discription" />
+            <TableColumn prefWidth="149.0" text="qty" />
+            <TableColumn prefWidth="189.0" text=" price" />
+            <TableColumn prefWidth="281.0" text="Total" />
         </columns>
       </TableView>
-      <JFXDatePicker layoutX="62.0" layoutY="298.0" prefHeight="25.0" prefWidth="305.0" promptText="order_date" />
-      <JFXButton layoutX="412.0" layoutY="343.0" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: blue;" text="Save" textFill="#fffefe">
+      <JFXButton layoutX="401.0" layoutY="333.0" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: blue;" styleClass="edge-button" text="ADD " textFill="#fffefe">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="515.0" layoutY="342.0" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: red;" text="Update" textFill="#fff1f1" />
-      <JFXButton layoutX="620.0" layoutY="343.0" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: yellow;" text="Delete">
+      <JFXButton layoutX="515.0" layoutY="333.0" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: red;" styleClass="edge-button" text="Clear" textFill="#fff1f1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="822.0" layoutY="330.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: pink;" styleClass="edge-button" stylesheets="@../Css/Style.css" text="Place order">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="726.0" layoutY="343.0" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: orange;" text="Search">
+      <JFXComboBox layoutX="47.0" layoutY="185.0" prefHeight="25.0" prefWidth="199.0" promptText="CustomerID" />
+      <JFXComboBox layoutX="48.0" layoutY="254.0" prefHeight="25.0" prefWidth="199.0" promptText="Item Code" />
+      <JFXTextField layoutX="295.0" layoutY="185.0" prefHeight="25.0" prefWidth="190.0" promptText="CustomerName" />
+      <JFXTextField layoutX="524.0" layoutY="186.0" prefHeight="25.0" prefWidth="190.0" promptText="CustomerAddress" />
+      <JFXTextField layoutX="526.0" layoutY="254.0" prefHeight="25.0" prefWidth="190.0" promptText="price" text="qty" />
+      <Label layoutX="14.0" layoutY="608.0" prefHeight="17.0" prefWidth="235.0" text="Total :00:00">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold Italic" size="18.0" />
          </font>
-      </JFXButton>
+      </Label>
+      <JFXTextField layoutX="754.0" layoutY="254.0" prefHeight="25.0" prefWidth="190.0" promptText="price" />
+      <JFXDatePicker layoutX="266.0" layoutY="118.0" prefHeight="25.0" prefWidth="242.0" promptText="orderdate" />
    </children>
 </AnchorPane>

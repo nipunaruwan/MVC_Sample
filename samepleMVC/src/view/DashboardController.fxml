@@ -2,48 +2,84 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="729.0" prefWidth="1092.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
+<AnchorPane prefHeight="734.0" prefWidth="1218.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
    <children>
-      <AnchorPane layoutX="1.0" layoutY="4.0" prefHeight="721.0" prefWidth="272.0" style="-fx-background-color: blue;">
+      <AnchorPane layoutX="1.0" prefHeight="740.0" prefWidth="272.0" style="-fx-background-color: blue;">
          <children>
-            <JFXButton layoutX="10.0" layoutY="217.0" onAction="#btncustomer" prefHeight="58.0" prefWidth="251.0" style="-fx-background-color: white;" text=" Customer">
+            <ImageView fitHeight="740.0" fitWidth="272.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../img/images.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="10.0" layoutY="200.0" onAction="#btnorderdetails" prefHeight="58.0" prefWidth="251.0" style="-fx-background-color: white;" text="Home">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </JFXButton>
-            <ImageView fitHeight="87.0" fitWidth="61.0" layoutX="4.0" layoutY="652.0" pickOnBounds="true" preserveRatio="true">
+            <JFXButton layoutX="10.0" layoutY="272.0" onAction="#btncustomer" prefHeight="58.0" prefWidth="251.0" style="-fx-background-color: white;" text=" Customer">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="8.0" layoutY="347.0" onAction="#btnitem" prefHeight="58.0" prefWidth="251.0" style="-fx-background-color: white;" text="Item">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="6.0" layoutY="425.0" onAction="#btnorder" prefHeight="58.0" prefWidth="251.0" style="-fx-background-color: white;" text="Order">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="87.0" fitWidth="61.0" layoutX="106.0" layoutY="672.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/icons8-logout-rounded-up-32.png" />
                </image>
             </ImageView>
-            <Button layoutX="8.0" layoutY="658.0" mnemonicParsing="false" opacity="0.0" prefHeight="51.0" prefWidth="53.0" text="Button" />
+            <Button layoutX="106.0" layoutY="673.0" mnemonicParsing="false" onAction="#btnlogout" opacity="0.0" prefHeight="61.0" prefWidth="61.0" text="Button" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="Home" layoutX="279.0" prefHeight="731.0" prefWidth="925.0">
+         <children>
+            <ImageView fitHeight="720.0" fitWidth="944.0" layoutY="8.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../img/supermarket-logo-template-design-vector-30440331.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="lbldate" layoutX="733.0" layoutY="14.0" prefHeight="31.0" prefWidth="187.0" text="Label">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ee0dee" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbltime" layoutX="734.0" layoutY="58.0" prefHeight="31.0" prefWidth="187.0" text="Label">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ee0dee" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="729.0" fitWidth="977.0" layoutX="271.0" pickOnBounds="true">
-         <image>
-            <Image url="@../img/supermarket-logo-template-design-vector-30440331.jpg" />
-         </image>
-      </ImageView>
-      <JFXButton layoutX="11.0" layoutY="286.0" onAction="#btnitem" prefHeight="58.0" prefWidth="251.0" style="-fx-background-color: white;" text="Item">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="11.0" layoutY="352.0" onAction="#btnorder" prefHeight="58.0" prefWidth="251.0" style="-fx-background-color: white;" text="Order">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="11.0" layoutY="418.0" onAction="#btnorderdetails" prefHeight="58.0" prefWidth="251.0" style="-fx-background-color: white;" text="OrderDetails">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </JFXButton>
-      <AnchorPane fx:id="Home" layoutX="273.0" layoutY="7.0" prefHeight="711.0" prefWidth="970.0" />
    </children>
 </AnchorPane>

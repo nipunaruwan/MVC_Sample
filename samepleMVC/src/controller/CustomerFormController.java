@@ -1,7 +1,10 @@
 package controller;
 
 import com.jfoenix.controls.JFXTextField;
+import db.DbConnection;
 import javafx.event.ActionEvent;
+
+import java.sql.Connection;
 
 public class CustomerFormController {
     public JFXTextField txtcusID;
@@ -15,6 +18,7 @@ public class CustomerFormController {
     }
 
     public void btnsave(ActionEvent actionEvent) {
+       Customer customer= new Cutomer
     }
 
     public void btndelete(ActionEvent actionEvent) {
