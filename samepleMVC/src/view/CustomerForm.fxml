@@ -52,5 +52,6 @@
             <Font name="System Bold" size="11.0" />
          </font>
       </JFXButton>
+      <JFXTextField fx:id="txttitle" layoutX="43.0" layoutY="128.0" prefHeight="25.0" prefWidth="248.0" />
    </children>
 </AnchorPane>

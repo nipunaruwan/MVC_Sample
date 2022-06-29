@@ -1,6 +1,6 @@
 package model;
 
-public class customer {
+public class Customer {
     private int cusID;
    private String cust_title;
     private String name;
@@ -9,17 +9,17 @@ public class customer {
     private String provide;
     private int postalcode;
 
-    public customer() {
+    public Customer() {
     }
 
-    public customer(int cusID, String cust_title, String name, String addresss, String city, String provide, int postalcode) {
-        this.setCusID(cusID);
-        this.setCust_title(cust_title);
-        this.setName(name);
-        this.setAddresss(addresss);
-        this.setCity(city);
-        this.setProvide(provide);
-        this.setPostalcode(postalcode);
+    public Customer(int cusID, String cust_title, String name, String addresss, String city, String provide, int postalcode) {
+        this.cusID = cusID;
+        this.cust_title = cust_title;
+        this.name = name;
+        this.addresss = addresss;
+        this.city = city;
+        this.provide = provide;
+        this.postalcode = postalcode;
     }
 
     public int getCusID() {

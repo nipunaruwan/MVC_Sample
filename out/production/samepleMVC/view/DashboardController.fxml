@@ -24,17 +24,17 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="8.0" layoutY="278.0" onAction="#btncustomer" prefHeight="58.0" prefWidth="251.0" style="-fx-background-color: white;" text=" Customer">
+            <JFXButton layoutX="10.0" layoutY="272.0" onAction="#btncustomer" prefHeight="58.0" prefWidth="251.0" style="-fx-background-color: white;" text=" Customer">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="5.0" layoutY="356.0" onAction="#btnitem" prefHeight="58.0" prefWidth="251.0" style="-fx-background-color: white;" text="Item">
+            <JFXButton layoutX="8.0" layoutY="347.0" onAction="#btnitem" prefHeight="58.0" prefWidth="251.0" style="-fx-background-color: white;" text="Item">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="10.0" layoutY="436.0" onAction="#btnorder" prefHeight="58.0" prefWidth="251.0" style="-fx-background-color: white;" text="Order">
+            <JFXButton layoutX="6.0" layoutY="425.0" onAction="#btnorder" prefHeight="58.0" prefWidth="251.0" style="-fx-background-color: white;" text="Order">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -48,12 +48,12 @@
          </children></AnchorPane>
       <AnchorPane fx:id="Home" layoutX="279.0" prefHeight="731.0" prefWidth="925.0">
          <children>
-            <ImageView fitHeight="720.0" fitWidth="930.0" layoutX="14.0" layoutY="8.0" pickOnBounds="true">
+            <ImageView fitHeight="720.0" fitWidth="944.0" layoutY="8.0" pickOnBounds="true">
                <image>
                   <Image url="@../img/supermarket-logo-template-design-vector-30440331.jpg" />
                </image>
             </ImageView>
-            <Label fx:id="lbldate" layoutX="741.0" layoutY="13.0" prefHeight="31.0" prefWidth="187.0" text="Label">
+            <Label fx:id="lbldate" layoutX="733.0" layoutY="14.0" prefHeight="31.0" prefWidth="187.0" text="Label">
                <textFill>
                   <LinearGradient endX="1.0" endY="1.0">
                      <stops>
@@ -66,7 +66,7 @@
                   <Font size="21.0" />
                </font>
             </Label>
-            <Label fx:id="lbltime" layoutX="740.0" layoutY="58.0" prefHeight="31.0" prefWidth="187.0" text="Label">
+            <Label fx:id="lbltime" layoutX="734.0" layoutY="58.0" prefHeight="31.0" prefWidth="187.0" text="Label">
                <textFill>
                   <LinearGradient endX="1.0" endY="1.0">
                      <stops>
