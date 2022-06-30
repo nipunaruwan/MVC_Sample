@@ -82,6 +82,7 @@ public class ItemController {
         try {
             Connection connection = DbConnection.getInstance().getConnection();
             PreparedStatement preparedStatement= connection.prepareStatement("SELECT * FROM item  WHERE item_code=?");
+            preparedStatement.setObject(1,txtItemcode.getText());
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } catch (ClassNotFoundException e) {
