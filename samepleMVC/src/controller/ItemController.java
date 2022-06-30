@@ -43,6 +43,8 @@ public class ItemController {
         int update= preparedStatement.executeUpdate();
         if (update>0){
             new Alert(Alert.AlertType.CONFIRMATION,"Updated",ButtonType.OK).show();
+        }else {
+            new Alert(Alert.AlertType.WARNING,"Try agian",ButtonType.OK).show();
         }
 
     }
