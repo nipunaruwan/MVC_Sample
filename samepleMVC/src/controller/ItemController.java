@@ -36,7 +36,7 @@ public class ItemController {
         preparedStatement.setObject(1,item.getDescription());
         preparedStatement.setObject(2,item.getPackSize());
         preparedStatement.setObject(3,item.getQtyOnHand());
-        preparedStatement.setObject(4,item.);
+        preparedStatement.setObject(4,item.getUnitPrice());
 
     }
 
