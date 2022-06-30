@@ -2,17 +2,26 @@ package controller;
 
 import com.jfoenix.controls.JFXTextField;
 import db.DbConnection;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import model.Customer;
+import view.tm.CustomerTM;
 
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
 
-public class CustomerFormController {
+public class CustomerFormController implements Initializable {
     public JFXTextField txtcusID;
     public JFXTextField txtpostalcode;
     public JFXTextField txtCusaddress;
@@ -20,6 +29,62 @@ public class CustomerFormController {
     public JFXTextField txtprovide;
     public JFXTextField txtCusname;
     public JFXTextField txttitle;
+    public TableView<CustomerTM> TblCustomer;
+
+
+
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        TblCustomer.getColumns().get(0).setCellValueFactory(new PropertyValueFactory<>("cusID"));
+        TblCustomer.getColumns().get(1).setCellValueFactory(new PropertyValueFactory<>("cust_title"));
+        TblCustomer.getColumns().get(2).setCellValueFactory(new PropertyValueFactory<>("name"));
+        TblCustomer.getColumns().get(3).setCellValueFactory(new PropertyValueFactory<>("addresss"));
+        TblCustomer.getColumns().get(4).setCellValueFactory(new PropertyValueFactory<>("city"));
+        TblCustomer.getColumns().get(5).setCellValueFactory(new PropertyValueFactory<>("provide"));
+        TblCustomer.getColumns().get(6).setCellValueFactory(new PropertyValueFactory<>("postalcode"));
+
+        getAllcustomer();
+
+        TblCustomer.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue)-> {
+            txtcusID.setText(newValue.getCusID());
+            txttitle.setText(newValue.getCust_title());
+            txtCusname.setText(newValue.getName());
+            txtCusaddress.setText(newValue.getAddresss());
+            txtcity.setText(newValue.getCity());
+            txtprovide.setText(newValue.getProvide());
+            txtpostalcode.setText(newValue.getPostalcode());
+
+        });
+
+    }
+    private void getAllcustomer(){
+        ArrayList<Customer> customers=new ArrayList<>();
+        ObservableList<CustomerTM>customerTM= FXCollections.observableArrayList();
+        try {
+            Connection connection = DbConnection.getInstance().getConnection();
+            PreparedStatement preparedStatement=connection.prepareStatement("SELECT * FROM customer");
+            ResultSet resultSet=preparedStatement.executeQuery();
+            while (resultSet.next()){
+                customers.add(new Customer(resultSet.getString(1),
+                        resultSet.getString(2),resultSet.getString(3),resultSet.getString(4),
+                        resultSet.getString(5),resultSet.getString(6),resultSet.getString(7)));
+
+            }
+            for (Customer cous :customers){
+                customerTM.add(new CustomerTM(cous.getCusID(),cous.getCust_title(),
+                        cous.getName(),cous.getAddresss(),cous.getCity(),
+                        cous.getProvide(),cous.getPostalcode()));
+            }
+            TblCustomer.setItems(customerTM);
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
 
     public void btnupdate(ActionEvent actionEvent) {
         Customer customer = new Customer(txtcusID.getText(), txttitle.getText(), txtCusname.getText(), txtCusaddress.getText(), txtcity.getText(), txtprovide.getText(), txtpostalcode.getText());
@@ -114,5 +179,8 @@ public class CustomerFormController {
             e.printStackTrace();
         }
     }
+
+
+
 }
 

@@ -1,6 +1,6 @@
-package model;
+package view.tm;
 
-public class Customer extends Item {
+public class CustomerTM {
     private String cusID;
     private String cust_title;
     private String name;
@@ -9,10 +9,10 @@ public class Customer extends Item {
     private String provide;
     private String postalcode;
 
-    public Customer() {
+    public CustomerTM() {
     }
 
-    public Customer(String cusID, String cust_title, String name, String addresss, String city, String provide, String postalcode) {
+    public CustomerTM(String cusID, String cust_title, String name, String addresss, String city, String provide, String postalcode) {
         this.cusID = cusID;
         this.cust_title = cust_title;
         this.name = name;
@@ -80,7 +80,7 @@ public class Customer extends Item {
 
     @Override
     public String toString() {
-        return "Customer{" +
+        return "CustomerTM{" +
                 "cusID='" + cusID + '\'' +
                 ", cust_title='" + cust_title + '\'' +
                 ", name='" + name + '\'' +

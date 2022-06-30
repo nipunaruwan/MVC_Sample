@@ -1,7 +1,7 @@
 package model;
 
 public class Item {
-   private int item_code;
+   private String item_code;
     private String description;
     private String packSize ;
     private int qtyOnHand;
@@ -11,7 +11,7 @@ public class Item {
  public Item() {
  }
 
- public Item(int item_code, String description, String packSize, int qtyOnHand, double unitPrice, String item_type) {
+ public Item(String item_code, String description, String packSize, int qtyOnHand, double unitPrice, String item_type) {
   this.item_code = item_code;
   this.description = description;
   this.packSize = packSize;
@@ -20,11 +20,11 @@ public class Item {
   this.item_type = item_type;
  }
 
- public int getItem_code() {
+ public String getItem_code() {
   return item_code;
  }
 
- public void setItem_code(int item_code) {
+ public void setItem_code(String item_code) {
   this.item_code = item_code;
  }
 
@@ -66,5 +66,17 @@ public class Item {
 
  public void setItem_type(String item_type) {
   this.item_type = item_type;
+ }
+
+ @Override
+ public String toString() {
+  return "Item{" +
+          "item_code='" + item_code + '\'' +
+          ", description='" + description + '\'' +
+          ", packSize='" + packSize + '\'' +
+          ", qtyOnHand=" + qtyOnHand +
+          ", unitPrice=" + unitPrice +
+          ", item_type='" + item_type + '\'' +
+          '}';
  }
 }

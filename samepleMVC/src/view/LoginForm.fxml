@@ -23,7 +23,7 @@
       </ImageView>
       <JFXTextField fx:id="txtUsername" layoutX="73.0" layoutY="158.0" prefHeight="44.0" prefWidth="270.0" promptText="User name" />
       <JFXPasswordField fx:id="txtpassword" layoutX="70.0" layoutY="290.0" prefHeight="25.0" prefWidth="277.0" promptText="password" />
-      <JFXButton layoutX="95.0" layoutY="411.0" onAction="#btnlogin" prefHeight="33.0" prefWidth="232.0" style="-fx-background-color: blue;" text="Login" textFill="#d0d0d0">
+      <JFXButton layoutX="93.0" layoutY="416.0" onAction="#btnlogin" prefHeight="52.0" prefWidth="248.0" style="-fx-background-color: blue;" styleClass="edge-button" stylesheets="@../Css/Style.css" text="Login" textFill="#d0d0d0">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
