@@ -88,6 +88,7 @@ public class ItemController {
             ResultSet resultSet=preparedStatement.executeQuery();
             while (resultSet.next()){
                 txtdescription.setText(resultSet.getString(2));
+                txtpackSize.setText(resultSet.getString(3));
                 
             }
         } catch (SQLException throwables) {
