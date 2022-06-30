@@ -91,7 +91,7 @@ public class ItemController {
                 txtpackSize.setText(resultSet.getString(3));
                 txtItemQTY.setText(resultSet.getString(4));
                 txtprice.setText(resultSet.getString(5));
-                
+                txtItem_type.setText(resultSet.getString(6));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
