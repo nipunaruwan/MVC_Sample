@@ -38,7 +38,12 @@ public class ItemController {
         preparedStatement.setObject(3,item.getQtyOnHand());
         preparedStatement.setObject(4,item.getUnitPrice());
         preparedStatement.setObject(5,item.getItem_type());
-        
+        preparedStatement.setObject(6,item.getItem_code());
+
+        int update= preparedStatement.executeUpdate();
+        if (update>0){
+            new Alert(Alert.AlertType.CONFIRMATION,"Updated",ButtonType.OK).show();
+        }
 
     }
 
