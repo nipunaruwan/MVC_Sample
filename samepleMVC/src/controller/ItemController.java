@@ -79,6 +79,14 @@ public class ItemController {
     }
 
     public void btnsearch(ActionEvent actionEvent) {
+        try {
+            Connection connection = DbConnection.getInstance().getConnection();
+            PreparedStatement preparedStatement= connection.prepareStatement("SELECT * FROM item  WHERE item_code=?");
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 
 
     }
