@@ -10,6 +10,7 @@ import model.Item;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ItemController {
@@ -83,6 +84,8 @@ public class ItemController {
             Connection connection = DbConnection.getInstance().getConnection();
             PreparedStatement preparedStatement= connection.prepareStatement("SELECT * FROM item  WHERE item_code=?");
             preparedStatement.setObject(1,txtItemcode.getText());
+
+            ResultSet resultSet=preparedStatement.executeQuery();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } catch (ClassNotFoundException e) {
