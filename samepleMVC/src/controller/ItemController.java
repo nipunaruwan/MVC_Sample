@@ -34,7 +34,8 @@ public class ItemController {
         }
         PreparedStatement preparedStatement=connection.prepareStatement("UPDATE item SET "+"description=?,packSize=?, qtyOnHand=?,unitPrice=?,item_type=? WHERE  item_code=?");
         preparedStatement.setObject(1,item.getDescription());
-        preparedStatement
+        preparedStatement.setObject(2,item.getPackSize());
+        
     }
 
     public void btnsave(ActionEvent actionEvent) {
