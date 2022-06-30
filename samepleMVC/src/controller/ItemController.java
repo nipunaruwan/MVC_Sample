@@ -32,7 +32,7 @@ public class ItemController {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        PreparedStatement preparedStatement=connection.prepareStatement("UPDATE item SET "+"");
+        PreparedStatement preparedStatement=connection.prepareStatement("UPDATE item SET "+"description=?,packSize=?,");
     }
 
     public void btnsave(ActionEvent actionEvent) {
