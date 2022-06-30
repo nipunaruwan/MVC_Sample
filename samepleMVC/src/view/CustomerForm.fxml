@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="640.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
    <children>
-      <JFXTextField fx:id="txtcusID" layoutX="36.0" layoutY="179.0" prefHeight="25.0" prefWidth="284.0" promptText="CustomerID" />
+      <JFXTextField fx:id="txtcusID" layoutX="36.0" layoutY="133.0" prefHeight="25.0" prefWidth="284.0" promptText="CustomerID" />
       <JFXTextField fx:id="txtpostalcode" layoutX="668.0" layoutY="291.0" prefHeight="25.0" prefWidth="284.0" promptText="postalcode" />
       <JFXTextField fx:id="txtCusaddress" layoutX="668.0" layoutY="182.0" prefHeight="25.0" prefWidth="284.0" promptText="Customeraddress" />
       <JFXTextField fx:id="txtcity" layoutX="30.0" layoutY="290.0" prefHeight="25.0" prefWidth="284.0" promptText="city" />
@@ -32,26 +32,26 @@
             <TableColumn prefWidth="172.0" text="postalcode" />
         </columns>
       </TableView>
-      <JFXButton layoutX="658.0" layoutY="335.0" onAction="#btnupdate" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: blue;" text="Update">
+      <JFXButton layoutX="574.0" layoutY="335.0" onAction="#btnupdate" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: blue;" text="Update">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="553.0" layoutY="337.0" onAction="#btnsave" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: red;" text="Save">
+      <JFXButton layoutX="467.0" layoutY="337.0" onAction="#btnsave" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: red;" text="Save">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="764.0" layoutY="335.0" onAction="#btndelete" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: yellow;" text="Delete">
+      <JFXButton layoutX="681.0" layoutY="335.0" onAction="#btndelete" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: yellow;" text="Delete">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="444.0" layoutY="337.0" onAction="#btnsearch" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: orange;" text="Search">
+      <JFXButton layoutX="350.0" layoutY="144.0" onAction="#btnsearch" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: orange;" text="Search">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
       </JFXButton>
-      <JFXTextField fx:id="txttitle" layoutX="43.0" layoutY="128.0" prefHeight="25.0" prefWidth="248.0" />
+      <JFXTextField fx:id="txttitle" layoutX="28.0" layoutY="184.0" prefHeight="25.0" prefWidth="284.0" promptText="Customer_Title" />
    </children>
 </AnchorPane>

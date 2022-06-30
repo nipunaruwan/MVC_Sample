@@ -1,18 +1,18 @@
 package model;
 
 public class Customer {
-    private int cusID;
-   private String cust_title;
+    private String cusID;
+    private String cust_title;
     private String name;
     private String addresss;
     private String city;
     private String provide;
-    private int postalcode;
+    private String postalcode;
 
     public Customer() {
     }
 
-    public Customer(int cusID, String cust_title, String name, String addresss, String city, String provide, int postalcode) {
+    public Customer(String cusID, String cust_title, String name, String addresss, String city, String provide, String postalcode) {
         this.cusID = cusID;
         this.cust_title = cust_title;
         this.name = name;
@@ -22,11 +22,11 @@ public class Customer {
         this.postalcode = postalcode;
     }
 
-    public int getCusID() {
+    public String getCusID() {
         return cusID;
     }
 
-    public void setCusID(int cusID) {
+    public void setCusID(String cusID) {
         this.cusID = cusID;
     }
 
@@ -70,24 +70,24 @@ public class Customer {
         this.provide = provide;
     }
 
-    public int getPostalcode() {
+    public String getPostalcode() {
         return postalcode;
     }
 
-    public void setPostalcode(int postalcode) {
+    public void setPostalcode(String postalcode) {
         this.postalcode = postalcode;
     }
 
     @Override
     public String toString() {
-        return "customer{" +
-                "cusID=" + cusID +
+        return "Customer{" +
+                "cusID='" + cusID + '\'' +
                 ", cust_title='" + cust_title + '\'' +
                 ", name='" + name + '\'' +
                 ", addresss='" + addresss + '\'' +
                 ", city='" + city + '\'' +
                 ", provide='" + provide + '\'' +
-                ", postalcode=" + postalcode +
+                ", postalcode='" + postalcode + '\'' +
                 '}';
     }
 }
