@@ -89,6 +89,8 @@ public class ItemController {
             while (resultSet.next()){
                 txtdescription.setText(resultSet.getString(2));
                 txtpackSize.setText(resultSet.getString(3));
+                txtItemQTY.setText(resultSet.getString(4));
+                txtprice.setText(resultSet.getString(5));
                 
             }
         } catch (SQLException throwables) {
