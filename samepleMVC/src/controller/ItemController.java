@@ -86,6 +86,10 @@ public class ItemController {
             preparedStatement.setObject(1,txtItemcode.getText());
 
             ResultSet resultSet=preparedStatement.executeQuery();
+            while (resultSet.next()){
+                txtdescription.setText(resultSet.getString(2));
+                
+            }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } catch (ClassNotFoundException e) {
