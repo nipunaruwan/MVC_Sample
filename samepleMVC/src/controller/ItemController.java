@@ -22,8 +22,17 @@ public class ItemController {
     public JFXTextField txtprice;
     public JFXTextField txtdescription;
 
-    public void btnupdate(ActionEvent actionEvent) {
+    public void btnupdate(ActionEvent actionEvent) throws SQLException {
         Item item= new Item(Integer.parseInt(txtItemcode.getText()),txtdescription.getText(),txtpackSize.getText(),Integer.parseInt(txtItemQTY.getText()),Double.parseDouble(txtprice.getText()),txtItem_type.getText());
+        Connection connection = null;
+        try {
+            connection = DbConnection.getInstance().getConnection();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        PreparedStatement preparedStatement=connection.prepareStatement("UPDATE item SET "+"");
     }
 
     public void btnsave(ActionEvent actionEvent) {
