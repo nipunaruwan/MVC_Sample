@@ -23,6 +23,7 @@ public class ItemController {
     public JFXTextField txtdescription;
 
     public void btnupdate(ActionEvent actionEvent) {
+        Item item= new Item(Integer.parseInt(txtItemcode.getText()),txtdescription.getText(),txtpackSize.getText(),Integer.parseInt(txtItemQTY.getText()),Double.parseDouble(txtprice.getText()),txtItem_type.getText());
     }
 
     public void btnsave(ActionEvent actionEvent) {
@@ -56,6 +57,6 @@ public class ItemController {
 
     public void btnsearch(ActionEvent actionEvent) {
 
-        
+
     }
 }
